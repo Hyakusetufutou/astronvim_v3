@@ -5,6 +5,7 @@ return {
   },
   cmd = "Telescope",
   opts = function()
+    vim.cmd "autocmd User TelescopePreviewerLoaded setlocal number"
     local actions = require "telescope.actions"
     local get_icon = require("astronvim.utils").get_icon
     return {
@@ -32,6 +33,19 @@ return {
           },
           n = { q = actions.close },
         },
+      },
+      pickers = {
+        find_files = {
+            previewer = false,
+            theme = "dropdown",
+            -- file_encoding = "cp932",
+          },
+
+          git_files = {
+            previewer = false,
+            theme = "dropdown",
+            -- file_encoding = "cp932",
+          },
       },
     }
   end,
