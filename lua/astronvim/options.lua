@@ -12,7 +12,7 @@ local options = astronvim.user_opts("options", {
     completeopt = { "menu", "menuone", "noselect" }, -- Options for insert mode completion
     copyindent = true, -- copy the previous indentation on autoindenting
     cursorline = true, -- highlight the text line of the cursor
-    expandtab = true, -- enable the use of space in tab
+    expandtab = false, -- enable the use of space in tab
     fileencoding = "utf-8", -- file content encoding for the buffer
     fillchars = { eob = " " }, -- disable `~` on nonexistent lines
     foldenable = true, -- enable fold for nvim-ufo
@@ -45,6 +45,8 @@ local options = astronvim.user_opts("options", {
     virtualedit = "block", -- allow going past end of line in visual block mode
     wrap = false, -- disable wrapping of lines longer than the width of window
     writebackup = false, -- disable making a backup before overwriting a file
+    -- list = true,
+    -- listchars = {tab='→ ', space='･'},
   },
   g = {
     mapleader = " ", -- set leader key
