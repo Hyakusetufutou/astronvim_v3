@@ -359,6 +359,15 @@ autocmd({ "BufReadPost", "BufNewFile", "BufWritePost" }, {
   end,
 })
 
+autocmd("FileType", {
+  pattern = {"cpp", "c"},
+  callback = function()
+    vim.bo.tabstop = 4
+    vim.bo.shiftwidth = 4
+  end,
+})
+
+
 cmd(
   "AstroChangelog",
   function() require("astronvim.utils.updater").changelog() end,
