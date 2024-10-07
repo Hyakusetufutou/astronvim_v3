@@ -162,6 +162,7 @@ if is_available "gitsigns.nvim" then
   maps.n["<leader>gS"] = { function() require("gitsigns").stage_buffer() end, desc = "Stage Git buffer" }
   maps.n["<leader>gu"] = { function() require("gitsigns").undo_stage_hunk() end, desc = "Unstage Git hunk" }
   maps.n["<leader>gd"] = { function() require("gitsigns").diffthis() end, desc = "View Git diff" }
+  maps.n["<leader>gg"] = { function() require("gitgraph").draw({}, {all = true, max_count = 5000}) end, desc = "GitGraph" }
 end
 
 -- NeoTree
